@@ -26,11 +26,7 @@ pipeline {
         
 		choice choices: ['dev', 'stg', 'qa', 'prod'], description: 'Environment', name: 'environment'
 		
-        string defaultValue: '', description: 'AWS Access Key (optional)', name: 'access_key'
 
-        password defaultValue: '', description: 'AWS Secret Key (optional)', name: 'secret_key'
-
-        choice choices: ['eu-west-1', 'eu-west-2', 'eu-west-3', 'eu-central-1', 'eu-north-1', 'ap-northeast-1', 'ap-northeast-2', 'ap-south-1', 'ap-southeast-1', 'ap-southeast-2', 'ca-central-1', 'sa-east-1', 'us-east-1', 'us-east-2', 'us-west-1', 'us-west-2'], description: 'AWS Region', name: 'region'
     }
     stages {
         stage('Checkout') {
